@@ -1,10 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page 
+    language="java" 
+    contentType="text/html; charset=UTF-8"
+    import="com.rahmak.Squad.*"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Squad</title>
 
  <!-- Bootstrap -->
 <link rel="stylesheet" href="resources/css/bootstrap.min.css">
@@ -15,6 +18,29 @@
     
 </head>
 <body>
+
+<%
+DbManager db = new DbManager();
+String id = request.getParameter("id");
+String name = request.getParameter("name");
+String password = request.getParameter("password");
+String age = request.getParameter("age");
+String weakness = request.getParameter("weakness");
+String strength = request.getParameter("strength");
+
+String action = request.getParameter("action");
+String create = "create";
+
+Squad squad = new Squad();
+
+if(create.equals(action)) {
+	int mAge = Integer.parseInt(age);
+	int mStrength = Integer.parseInt(strength);
+	int mWeakness = Integer.parseInt(weakness);
+	squad = new Squad(name, password, mAge, mWeakness, mStrength);
+	db.create(squad);
+}
+%>
 
 <!-- jumbotron header -->
 <div class="jumbotron">
@@ -45,7 +71,7 @@
 </div>
 
 <div class="container">
-<form action="index.jsp">
+<form action="Heroes.jsp">
 
 <div class="form-group">
 <label for="name">Enter Hero Name: </label>
@@ -91,7 +117,7 @@
 </div>
 
 <div>
-<button class="btn btn-success btn-lg" name="save" action="save">Save Hero</button>
+<button class="btn btn-success btn-lg" name="action" value="create">Save Hero</button>
 </div>
 </form>
 </div>
