@@ -72,6 +72,7 @@ Best Heroes Kenya
 </div>
 
 <div class="container">
+A List of Available Heores:
 <table class="table">
 <thead>
 <tr class="active">
@@ -96,6 +97,27 @@ for(Squad hero:heroes) {
 }
 %>
 </table>
+</div>
+
+<div class="row">
+<div class="col-sm-6 col-md-6">
+<div class="thumbnail">
+<img alt="EPL" src="resources/images/download.jpg">
+<h3>Premier Squad Stadium</h3>
+<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+<p><a href="#" class="btn btn-primary" role="button">View Hero</a>
+</p>
+</div>
+</div>
+
+<div class="col-sm-6 col-md-6">
+<div class="thumbnail">
+<img alt="METFONE STADIUM" src="resources/images/download 3.jpg">
+<h3>Metafone Squad Stadium</h3>
+<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+<p><a href="#" class="btn btn-primary" role="button">View Hero</a></p>
+</div>
+</div>
 </div>
 
 <nav class="navbar navbar-default" id="navbar">

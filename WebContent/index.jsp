@@ -71,7 +71,7 @@ if(create.equals(action)) {
 </div>
 
 <div class="container">
-<form action="Heroes.jsp">
+<form action="index.jsp">
 
 <div class="form-group">
 <label for="name">Enter Hero Name: </label>
@@ -118,7 +118,9 @@ if(create.equals(action)) {
 
 <div>
 <button class="btn btn-success btn-lg" name="action" value="create">Save Hero</button>
+<a class="btn btn-success btn-lg" href="Heroes.jsp">View Saved Hero</a>
 </div>
+
 </form>
 </div>
 
