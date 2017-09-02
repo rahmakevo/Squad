@@ -11,3 +11,10 @@
 	margin-right: 25px;
 	margin-bottom: 25px;
 }
+
+.container {
+	border-top: 25px;
+	border-left: 25px;
+	border-right: 25px;
+	margin-bottom: 25px;
+}

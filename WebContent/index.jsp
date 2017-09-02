@@ -44,6 +44,64 @@
 </div>
 </div>
 
+<div class="container">
+<form action="index.jsp">
+
+<div class="form-group">
+<label for="name">Enter Hero Name: </label>
+<input type="text" class="form-control" name="name" placeholder="Name">
+</div>
+
+<div class="form-group">
+<label for="password">Enter Hero Password: </label>
+<input type="password" class="form-control" name="password" placeholder="Password">
+</div>
+
+<div class="form-group">
+<label for="age">Enter Hero Age: </label>
+<select class="form-control" name="age">
+  <option>11</option>
+  <option>12</option>
+  <option>13</option>
+  <option>14</option>
+  <option>15</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="weakness">Enter Hero Weakness: </label>
+<select class="form-control" name="weakness">
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="strength">Enter Hero Strength: </label>
+<select class="form-control" name="strength">
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+</select>
+</div>
+
+<div>
+<button class="btn btn-success btn-lg" name="save" action="save">Save Hero</button>
+</div>
+</form>
+</div>
+
+<nav class="navbar navbar-default" id="navbar">
+<div class="container">
+<p><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Made With Love In Kenya</p>
+</div>
+</nav>
+
 <!-- jQuery (necessary for bootstrap's JavaScript plugins) -->
 <script src="resources/js/jquery.min.js" charset="utf-8"></script>
 
