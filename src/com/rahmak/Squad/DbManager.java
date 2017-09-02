@@ -6,7 +6,10 @@ package com.rahmak.Squad;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author rahmak
@@ -68,6 +71,34 @@ public class DbManager {
 			} finally {
 				closeConnection(connection);
 			}
+		}
+		
+		
+		public List<Squad> selectAll(){
+			// create an empty List ARRAY
+			List <Squad> heroes = new ArrayList<Squad>();
+			
+			String sql = "Select * from squad";
+			Connection conn = getConnection();
+			try {
+				PreparedStatement statement = conn.prepareStatement(sql);
+				ResultSet results = statement.executeQuery();
+				while(results.next()) {
+					int id = results.getInt("id");
+					String name = results.getString("name");
+					int age = results.getInt("age");
+					int weakness = results.getInt("weakness");
+					int strength = results.getInt("strength");
+					Squad squad = new Squad(id, name, age, weakness, strength);
+					heroes.add(squad);
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} finally {
+				closeConnection(conn);
+			}
+			return heroes;
 		}
 		
 	

@@ -121,6 +121,20 @@ public class Squad {
 		this.weakness = weakness;
 		this.strength = strength;
 	}
+	/**
+	 * @param id
+	 * @param name
+	 * @param age
+	 * @param weakness
+	 * @param strength
+	 */
+	public Squad(int id, String name, int age, int weakness, int strength) {
+		this.id = id;
+		this.name = name;
+		this.age = age;
+		this.weakness = weakness;
+		this.strength = strength;
+	}
 	
 	
 
